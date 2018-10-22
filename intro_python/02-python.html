@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>reveal.js</title>
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/night.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>An introduction to Python</h2>
+        <h4>Week 2: Flow Control and Functions</h4>
+        <p>
+          <small>By
+            <a href="http://hakim.se">Robert Mortimer</a>
+          </small>
+        </p>
+      </section>
+      <section>
+        <h4>Week 2: Flow Control and Functions</h4>
+        <section style="text-align: left;">
+          <br/>
+          <li class="fragment fade-right">Logic statements</li>
+          <li class="fragment fade-right">Control execution</li>
+          <li class="fragment fade-right">Based on conditions</li>
+          <li class="fragment fade-right">if x == 7</li>
+        </section>
+      </section>
+      <section>
+        <h4>Week 2: Flow Control and Functions</h4>
+        <section style="text-align: left;">
+          <br/>
+          <li class="fragment fade-right">if</li>
+          <li class="fragment fade-right">for</li>
+          <li class="fragment fade-right">while</li>
+        </section>
+      </section>
+      <section>
+          <h4>Week 2: Flow Control and Functions</h4>
+          <h5>Tests</h5>
+          <section style="text-align: left;">
+            <br/>
+            <li class="fragment fade-right">==</li>
+            <li class="fragment fade-right">!=</li>
+            <li class="fragment fade-right"><></li>
+            <li class="fragment fade-right"><=</li>
+            <li class="fragment fade-right">>=</li>
+          </section>
+        </section>
+        <section>
+        <h1>if</h1>
+      </section>
+      <section>
+        <h4>Week 2: Flow Control and Functions</h4>
+        <h5>Some simple code (if)</h5>
+        <section style="text-align: left;">
+            <pre class="fragment fade-right"><code class="Py">number = 23
+guess = int(input('Enter an integer : '))
+
+if guess == number:
+    # New block starts here
+    print('Congratulations, you guessed it.')
+elif guess < number:
+    # Another block
+    print('No, it is a little higher than that')
+else:
+    print('No, it is a little lower than that')
+    # you must have guessed > number to reach here
+
+print('Done')
+# This last statement is always executed</code>
+        </section>
+      </section>
+      <section>
+        <h2>An introduction to Python</h2>
+        <h3>20 Questions break out</h3>
+      </section>
+      <section>
+        <h1>while</h1>
+      </section>
+      <section>
+        <h4>Week 2: Flow Control and Functions</h4>
+        <h5>Some simple code (while)</h5>
+        <section style="text-align: left;">
+            <pre class="fragment fade-right"><code class="Py">number = 23
+running = True
+while running:
+    guess = int(input('Enter an integer : '))
+    if guess == number:
+        print('Congratulations, you guessed it.')
+        # this causes the while loop to stop
+        running = False
+    elif guess < number:
+        print('No, it is a little higher than that.')
+    else:
+        print('No, it is a little lower than that.')
+else:
+    print('The while loop is over.')
+print('Done')</code>
+        </section>
+      </section>
+      <section>
+        <h2>An introduction to Python</h2>
+        <h3>20 Questions break out Y or N</h3>
+      </section>      
+      <section>
+        <h1>for</h1>
+      </section>
+      <section>
+        <h4>Week 2: Flow Control and Functions</h4>
+        <h5>Some simple code (for)</h5>
+        <section style="text-align: left;">
+            <pre class="fragment fade-right"><code class="Py">for i in range(1, 5):
+    print(i)
+else:
+    print('The for loop is over')</code>
+        </section>
+      </section>
+
+      <section>
+          <h4>Week 2: Flow Control and Functions</h4>
+          <h5>Functions</h5>
+          <section style="text-align: left;">
+              <pre class="fragment fade-right"><code class="Py">def print_max(a, b):
+    if a > b:
+        print(a, 'is maximum')
+    elif a == b:
+        print(a, 'is equal to', b)
+    else:
+        print(b, 'is maximum')
+
+# directly pass literal values
+print_max(3, 4)</code>
+          </section>
+        </section>
+
+
+      <section data-background-transition="zoom" data-background="images/thats-all-folks-7172-1280x800.jpg" >
+
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+</body>
+
+</html>
