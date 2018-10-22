@@ -44,10 +44,26 @@ if x < 4000:
         print(str(k) + ' Devides ' + str(y[0]) + ' Times' )
         bigest_int = k
         smallest_count = y[0]
-    while smallest_count > 0:
-      roman_number = roman_number + arabic_nbr[bigest_int]
-      smallest_count += -1
-      x = x - bigest_int
+
+    if smallest_count == 4:
+      next_biggest = 0
+      for k in arabic_nbr:
+        if ((next_biggest == 0) and (k > bigest_int)) or ((k < next_biggest) and (k > bigest_int)):
+          next_biggest = k
+          roman_number = roman_number + arabic_nbr[bigest_int] + arabic_nbr[next_biggest]
+          x = x - (bigest_int * 4)
+
+      
+
+
+
+
+
+    else:
+      while smallest_count > 0:
+        roman_number = roman_number + arabic_nbr[bigest_int]
+        smallest_count += -1
+        x = x - bigest_int
 
 
 
