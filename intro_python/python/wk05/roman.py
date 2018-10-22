@@ -19,14 +19,16 @@ roman_nbr = {
 }
 
 arabic_nbr = { 
-    1000 : 'M',
-    500  : 'D',
-    100  : 'C',
-    50   : 'L',
-    10   : 'X',
+    1    : 'I',
     5    : 'V',
-    1    : 'I'
+    10   : 'X',
+    50   : 'L',
+    100  : 'C',
+    500  : 'D',
+    1000 : 'M'
 }
+
+x = int(input('Enter your number : '))
 
 # Loop through our our numbers in order
 for k in arabic_nbr:
@@ -36,6 +38,6 @@ for k in roman_nbr:
   print(roman_nbr[k])
 
 # Find exact division with remainder
-x = divmod(1420, 500)
-print('Whole times : ' + str(x[0]))
-print('remainder   : ' + str(x[1]))
+#x = divmod(1420, 500)
+#print('Whole times : ' + str(x[0]))
+#print('remainder   : ' + str(x[1]))

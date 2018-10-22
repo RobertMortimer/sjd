@@ -1,7 +1,9 @@
+import random
+
 def score(pl_one, pl_two):
     names = ['Player 1', 'Player 2']
     scores = ['love', '15', '30', '40', 'set']
-    ties = ['Love all', '15 all', '30 all', 'Duce', 'set']
+    ties = ['Play', '15 all', '30 all', 'Duce', 'set']
 
     # Are we looking for a winner
     if (pl_one < 4)  and (pl_two < 4):
@@ -28,14 +30,26 @@ def score(pl_one, pl_two):
                 return [names[1] + ' ' + pos, True]
         
 
+#for x in range(10):
+#  print( random.randint(0,1))
+
+pl1 = 0
+pl2 = 0
+print('Game on!')
+while score(pl1,pl2)[1] == False:
+    print(score (pl1,pl2)[0])
+    if random.randint(0,1) == 1:
+        pl1 += 1 
+    else:
+        pl2 += 1
+print(score (pl1,pl2)[0])
 
 
-
-print(score (0,0)[0])
-print(score (0,1)[0])
-print(score (0,2)[0])
-print(score (0,3)[0])
-print(score (0,4)[0])
-print(score (5,5)[0])
-print(score (6,5)[0])
-print(score (7,5)[0])
+# print(score (0,0)[0])
+# print(score (0,1)[0])
+# print(score (0,2)[0])
+# print(score (0,3)[0])
+# print(score (0,4)[0])
+# print(score (5,5)[0])
+# print(score (6,5)[0])
+# print(score (7,5)[0])
